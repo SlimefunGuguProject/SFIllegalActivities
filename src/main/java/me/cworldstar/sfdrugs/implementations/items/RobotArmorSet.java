@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 
@@ -55,6 +59,41 @@ public class RobotArmorSet {
 			}
 		}
 	}
+	
+	public static RobotArmor[] ToRobotArmor(ItemStack[] ArmorPieces) {
+		List<RobotArmor> ValidatedPieces = new ArrayList<RobotArmor>();
+		for(ItemStack ArmorPiece : ArmorPieces) {
+			if (SlimefunItem.getByItem(ArmorPiece) != null) {
+				if (SlimefunItem.getByItem(ArmorPiece).getId().contains("SFDRUGS_CORPORATION_ROBOT")) {
+					ValidatedPieces.add((RobotArmor)SlimefunItem.getByItem(ArmorPiece));
+				}
+			}
+		}
+		return ValidatedPieces.toArray(new RobotArmor[]{});
+	}
+	
+	public static boolean RemoveSetItemCharge(RobotArmor[] ArmorPieces, int charge,PlayerItemDamageEvent e) {
+		
+		for(RobotArmor Piece : ArmorPieces) {
+			Piece.ArmorDamaged(e,Piece.getItem(), charge / ArmorPieces.length);
+		}
+		return true;
+	}
+	public static boolean RemoveSetItemCharge(RobotArmor[] ArmorPieces, double charge,EntityDamageByEntityEvent e) {
+		if(e.getEntity() instanceof Mob) {
+			for(RobotArmor Piece : ArmorPieces) {
+				Piece.EntityDamaged(e,(Mob) e.getEntity(),Piece.getItem(), charge / ArmorPieces.length);
+			}
+		} else if(e.getEntity() instanceof Player) {
+			for(RobotArmor Piece: ArmorPieces) {
+				Piece.PlayerDamaged(e, (Player) e.getEntity(), Piece.getItem(), charge / ArmorPieces.length);
+			}
+		}
+		
+
+		return true;
+	}
+	
 	
 	public RobotArmorSet(SFDrugs plugin, ItemGroup group, SlimefunItemStack[] ArmorPieces, RecipeType SecurityRobotDrop,PotionEffect[] PotionEffects) {
 		for(SlimefunItemStack ArmorPiece : ArmorPieces) {

@@ -42,7 +42,8 @@ public class GangMember {
 		z.setCustomName(ChatColor.translateAlternateColorCodes('&', "&c&l&k|||&r &4&l⚠ Red Wolves Gangster ⚠&r &c&l&k|||&r"));
 		z.setMaxHealth(750.0);
 		z.setHealth(750.0);
-		z.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE,999999,5));
+		z.setAdult();
+		z.setCanPickupItems(false);		
 		z.setLootTable(new CorporationEnemyLootTable(plugin));
 		BossBar EnemyBossBar = Bukkit.getServer().createBossBar(ChatColor.translateAlternateColorCodes('&',"&c&l&k|||&r &4&l⚠ Red Wolves Gangster ⚠&r &c&l&k|||&r"),BarColor.RED, BarStyle.SEGMENTED_12);
 		EnemyBossBar.setVisible(true);
@@ -75,7 +76,7 @@ public class GangMember {
 		}.runTaskTimer(plugin, 0L, 20L);
 		
 		
-		ItemStack ZombieHead = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmYzNjhhODZjZmZkMjllYTI1YjFhYjdlNTVhYzFkMDQ5NGY3MjZhODUzZmRiNDA0MmU3YzcxY2QwNmI5NmQzNyJ9fX0=");
+		ItemStack ZombieHead = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2MzQzZjU3NzYwMTY3ODNjMDJmZTdiNDU3NjMxYWU2YWJjZWIwMjYzOTQwODBhZmNjMzM1NDIxYjJjYzZiIn19fQ==");
 		ItemStack Boots = new ItemStack(Material.LEATHER_BOOTS);
 		
 		LeatherArmorMeta BootsMeta = (LeatherArmorMeta) Boots.getItemMeta();
@@ -123,7 +124,7 @@ public class GangMember {
 			public void run() {
 				if(z.isDead()) {
 					this.cancel();
-				} else if(z.hasAI() & z.getTarget() != null & z.getTarget() instanceof LivingEntity) {
+				} else if(z.hasAI() & z.getTarget() != null && z.getTarget() instanceof LivingEntity) {
 					int RandomNumber = new Random().nextInt(3);
 					switch(RandomNumber) {
 						case 0:
@@ -135,11 +136,18 @@ public class GangMember {
 							z.setInvulnerable(true);
 							z.getWorld().createExplosion(z.getLocation(), 3,true,false);
 							z.setInvulnerable(false);
+							for(Entity entities : z.getNearbyEntities(3, 3, 3)) {
+								z.swingMainHand();
+								z.getTarget().setVelocity(z.getTarget().getLocation().toVector().normalize().multiply(-1).multiply(20));
+								if(entities instanceof LivingEntity) {
+									((LivingEntity) entities).damage(new Random().nextDouble() * 20,z);
+								}
+							}
 						case 2:
 							new Speak(z,z.getNearbyEntities(15.0, 15.0, 15.0),"&c&l[&k|||&r &4&l⚠ Red Wolves Gangster ⚠&r &c&l&k|||&r&c&l]:&r &cJust die!");
 							for(int i=0;i<4;i++) {
 								LlamaSpit LaserProjectile = z.launchProjectile(LlamaSpit.class);
-								Vector source = z.getLocation().getDirection().normalize().multiply(10);
+								Vector source = z.getLocation().getDirection().normalize().multiply(50);
 								Vector v = z.getTarget().getLocation().toVector().subtract(source);
 								BukkitTask LaserProjectileVelocityTask = new BukkitRunnable() {
 									@Override
@@ -167,6 +175,8 @@ public class GangMember {
 								}.runTaskLater(plugin, 100L); // Remove after 10 seconds
 								break;
 							}
+						default:
+							break;
 					}
 				}
 			}

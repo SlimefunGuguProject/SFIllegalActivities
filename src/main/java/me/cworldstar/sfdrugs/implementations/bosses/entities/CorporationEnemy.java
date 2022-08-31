@@ -38,6 +38,8 @@ public class CorporationEnemy {
 		z.setCanPickupItems(false);
 		z.setMaxHealth(300.0);
 		z.setHealth(300.0);
+		z.setAdult();
+		z.setCanPickupItems(false);
 		z.setAbsorptionAmount(200.0);
 		z.setLootTable(new CorporationEnemyLootTable(Plugin));
 		BossBar EnemyBossBar = Bukkit.getServer().createBossBar(ChatColor.translateAlternateColorCodes('&',"&a&lCorporate Security Robot"),BarColor.WHITE, BarStyle.SEGMENTED_12,BarFlag.DARKEN_SKY,BarFlag.CREATE_FOG);
@@ -107,11 +109,12 @@ public class CorporationEnemy {
 							new Speak(z,z.getNearbyEntities(10.0, 10.0, 10.0),"&7&l[ Corporate Security Robot ]:&r &7Enemy located. Subjugating...");
 							Snowball LaserProjectile = z.launchProjectile(Snowball.class);
 							LaserProjectile.setItem(new ItemStack(Material.DIAMOND_SWORD));
-							Vector Direction = z.getTarget().getLocation().toVector().subtract(z.getLocation().toVector()).normalize();
+							Vector source = z.getLocation().getDirection().normalize().multiply(50);
+							Vector v = z.getTarget().getLocation().toVector().subtract(source);
 							new BukkitRunnable() {
 								@Override
 								public void run() {
-									LaserProjectile.setVelocity(Direction.multiply(8));
+									LaserProjectile.setVelocity(v);
 									LaserProjectile.getWorld().spawnParticle(Particle.VILLAGER_ANGRY,LaserProjectile.getLocation(),4);
 									if(LaserProjectile.isDead()) {
 										this.cancel();
