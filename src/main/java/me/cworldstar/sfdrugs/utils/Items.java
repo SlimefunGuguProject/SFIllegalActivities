@@ -57,13 +57,13 @@ public class Items {
 	// Materials
 	
 	public static final ItemStack SFDRUGS_ITEM = new CustomItemStack(Material.SUGAR,"&d&lSFDrugs","","&d> 点击打开");
-	public static final SlimefunItemStack RED_PHOSPHORUS = new SlimefunItemStack("SFDRUGS_RED_PHOSPHORUS",Material.REDSTONE,"&c红磷","","&c - 蒸馏肉汁-真的好怪.");
-	public static final SlimefunItemStack PSEUDOEPHEDRINE = new SlimefunItemStack("SFDRUGS_PSEUDOEPHEDRINE",Material.WATER_BUCKET,"&b黄碱","","&b - 蒸馏植物汁-还是很怪.");
-	public static final SlimefunItemStack TWELVE = new SlimefunItemStack("SFDRUGS_TWELVE",Material.FIRE_CHARGE,"&412", "", "&4- 我不确定他来自哪里.");
-	public static final SlimefunItemStack TRAY = new SlimefunItemStack("SFDRUGS_METH_TRAY",Material.HEAVY_WEIGHTED_PRESSURE_PLATE,"&f&l蒸煮盘子", "" , "&f- 在烘干机使用??.");
+	public static final SlimefunItemStack RED_PHOSPHORUS = new SlimefunItemStack("SFDRUGS_RED_PHOSPHORUS",Material.REDSTONE,"&c红磷","","&c - 蒸馏肉汁-真的好怪");
+	public static final SlimefunItemStack PSEUDOEPHEDRINE = new SlimefunItemStack("SFDRUGS_PSEUDOEPHEDRINE",Material.WATER_BUCKET,"&b黄碱","","&b - 蒸馏植物汁-还是很怪");
+	public static final SlimefunItemStack TWELVE = new SlimefunItemStack("SFDRUGS_TWELVE",Material.FIRE_CHARGE,"&412", "", "&4- 我不确定他来自哪里");
+	public static final SlimefunItemStack TRAY = new SlimefunItemStack("SFDRUGS_METH_TRAY",Material.HEAVY_WEIGHTED_PRESSURE_PLATE,"&f&l蒸煮盘子", "" , "&f- 在烘干机使用??");
 	public static final SlimefunItemStack METH_COMPOUND = new SlimefunItemStack("SFDRUGS_METH_COMPOUND",Material.DIAMOND,"&9甲基苯丙混合物", "" , "&9 - ...");
-	public static final SlimefunItemStack DRIED_PLANT = new SlimefunItemStack("SFDRUGS_DRIED_PLANT",Material.OAK_LEAVES,"&2干燥的植物", "" , "&2 - 你可以在离心机里使用.");
-	public static final SlimefunItemStack MONEY = new SlimefunItemStack("SFDRUGS_MONEY",Material.PAPER,"&a 100货币", "" , "&2 - 你可以用它进行交易.");
+	public static final SlimefunItemStack DRIED_PLANT = new SlimefunItemStack("SFDRUGS_DRIED_PLANT",Material.OAK_LEAVES,"&2干燥的植物", "" , "&2 - 你可以在离心机里使用");
+	public static final SlimefunItemStack MONEY = new SlimefunItemStack("SFDRUGS_MONEY",Material.PAPER,"&a 100货币", "" , "&2 - 你可以用它进行交易");
 	
 	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_RAW = new SlimefunItemStack("SFDRUGS_SIRTHIUM_RAW",Material.SLIME_BLOCK,"&a生硅", "",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_PROCESSED = new SlimefunItemStack("SFDRUGS_SIRTHIUM",Material.EMERALD,"&a硅水晶", "",LoreBuilder.radioactive(Radioactivity.HIGH),LoreBuilder.HAZMAT_SUIT_REQUIRED);
@@ -72,15 +72,15 @@ public class Items {
 
 	
 	// Drugs
-	public static final SlimefunItemStack SNAIDS = new SlimefunItemStack("SFDRUGS_SNAIDS",Material.HONEY_BOTTLE,"&d&l胃蛋白酶","","&d - 你可能会爆发.");
+	public static final SlimefunItemStack SNAIDS = new SlimefunItemStack("SFDRUGS_SNAIDS",Material.HONEY_BOTTLE,"&d&l胃蛋白酶","","&d - 你可能会爆发");
 	public static final SlimefunItemStack CYANIDE = new SlimefunItemStack("SFDRUGS_CYANIDE",Material.CLAY_BALL,"&1氰化物", "" , "&1 - 吃了他你将会死.", "&1 - 为什么要做他?");
-	public static final SlimefunItemStack METH = new SlimefunItemStack("SFDRUGS_METH",Material.SUGAR,"&9甲基苯丙胺", "" , "&9 - 沃尔特,我现在对你没兴趣.");
+	public static final SlimefunItemStack METH = new SlimefunItemStack("SFDRUGS_METH",Material.SUGAR,"&9甲基苯丙胺", "" , "&9 - 沃尔特,我现在对你没兴趣");
 	
 	// Machines
-	public static final SlimefunItemStack CIRCUIT_FABRICATOR = new SlimefunItemStack("SFDRUGS_MACHINES_CIRCUIT_FABRICATOR",Material.WEATHERED_COPPER,"&7电路制造厂","","&7自动生产基础电路.","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
-	public static final SlimefunItemStack MONEY_PRINTER = new SlimefunItemStack("SFDRUGS_MACHINES_MONEY_PRINTER",Material.ANCIENT_DEBRIS,"&7印钞机","","&7生产钱.","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
-	public static final SlimefunItemStack DRYER = new SlimefunItemStack("SFDRUGS_MACHINES_DRYER",Material.BLAST_FURNACE,"&d烘干机","","&d - 干燥药品化合物.", "",LoreBuilder.machine(MachineTier.MEDIUM,MachineType.MACHINE));
-	public static final SlimefunItemStack CENTRIFUGE = new SlimefunItemStack("SFDRUGS_MACHINES_CENTRIFUGE",Material.BREWING_STAND,"&d离心机","","&d - 创造药品化合物.", "",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+	public static final SlimefunItemStack CIRCUIT_FABRICATOR = new SlimefunItemStack("SFDRUGS_MACHINES_CIRCUIT_FABRICATOR",Material.WEATHERED_COPPER,"&7电路制造厂","","&7自动生产基础电路","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+	public static final SlimefunItemStack MONEY_PRINTER = new SlimefunItemStack("SFDRUGS_MACHINES_MONEY_PRINTER",Material.ANCIENT_DEBRIS,"&7印钞机","","&7生产钱","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+	public static final SlimefunItemStack DRYER = new SlimefunItemStack("SFDRUGS_MACHINES_DRYER",Material.BLAST_FURNACE,"&d烘干机","","&d - 干燥药品化合物", "",LoreBuilder.machine(MachineTier.MEDIUM,MachineType.MACHINE));
+	public static final SlimefunItemStack CENTRIFUGE = new SlimefunItemStack("SFDRUGS_MACHINES_CENTRIFUGE",Material.BREWING_STAND,"&d离心机","","&d - 创造药品化合物", "",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
 	
 	// LootChests
 	public static final ItemStack RARE_LOOT_CHEST_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWU3ZWY0ZTNmYmFhMGJmNzk5ZGQxMzY5N2UyYzBmMzM5NTVhNGEwZGFiMmYyOTkyZGExN2FhMjllODFhZGY4NyJ9fX0=");
@@ -89,9 +89,9 @@ public class Items {
 	
 	// Tools and the like
 	
-	public static final SlimefunItemStack DRUG_PICKAXE = new SlimefunItemStack("SFDRUGS_DRUG_PICKAXE",Material.NETHERITE_PICKAXE,"&a&l&k|||&r &7&l采矿钻探机&r &a&l&k|||&r","&7效率15","&7时运15","&7耐久20","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感.","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack DRUG_SHOVEL = new SlimefunItemStack("SFDRUGS_DRUG_SHOVEL",Material.NETHERITE_SHOVEL,"&a&l&k|||&r &7&l地面粉碎机&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感.","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack DRUG_AXE = new SlimefunItemStack("SFDRUGS_DRUG_AXE",Material.NETHERITE_AXE,"&a&l&k|||&r &7&l电锯&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感.","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack DRUG_PICKAXE = new SlimefunItemStack("SFDRUGS_DRUG_PICKAXE",Material.NETHERITE_PICKAXE,"&a&l&k|||&r &7&l采矿钻探机&r &a&l&k|||&r","&7效率15","&7时运15","&7耐久20","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack DRUG_SHOVEL = new SlimefunItemStack("SFDRUGS_DRUG_SHOVEL",Material.NETHERITE_SHOVEL,"&a&l&k|||&r &7&l地面粉碎机&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack DRUG_AXE = new SlimefunItemStack("SFDRUGS_DRUG_AXE",Material.NETHERITE_AXE,"&a&l&k|||&r &7&l电锯&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 
 	public static final SlimefunItemStack HOE = new SlimefunItemStack("SFDRUGS_HOE",Material.WOODEN_HOE,"&d小镇锄头", "","&d&l生成");
 	public static final SlimefunItemStack MYSTERIOUS_TRADER_SUMMONER  = new SlimefunItemStack("SFDRUGS_MYSTERIOUS_TRADER_SUMMONER",Material.CRYING_OBSIDIAN,"&c神秘商人的呼号","",LoreBuilder.RIGHT_CLICK_TO_USE);
@@ -106,7 +106,7 @@ public class Items {
 	public static final SlimefunItemStack PICKAXE_BLUEPRINT = new SlimefunItemStack("SFDRUGS_PICKAXE_BLUEPRINT",Material.FILLED_MAP,"&7采矿钻探机蓝图");
 	public static final SlimefunItemStack AXE_BLUEPRINT = new SlimefunItemStack("SFDRUGS_AXE_BLUEPRINT",Material.FILLED_MAP,"&7电锯蓝图");
 	public static final SlimefunItemStack SHOVEL_BLUEPRINT = new SlimefunItemStack("SFDRUGS_SHOVEL_BLUEPRINT",Material.FILLED_MAP,"&7地面粉碎机蓝图");
-	public static final SlimefunItemStack DRUG_PIPE = new SlimefunItemStack("SFDRUGS_DRUG_PIPE",Material.STICK,"&c药物管","","&c- 拖放一个","&c- 药物还在这个物品上","&c- 擅自服用药物","&c- 会有副作用.");
+	public static final SlimefunItemStack DRUG_PIPE = new SlimefunItemStack("SFDRUGS_DRUG_PIPE",Material.STICK,"&c药物管","","&c- 拖放一个","&c- 药物还在这个物品上","&c- 禁止擅自服用药物","&c- 会有副作用");
 	
 	// Armor
 		public static final SlimefunItemStack GANGSTER_BOOTS = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_BOOTS,"&c红狼的鞋子","",LoreBuilder.material("用编织过的锡合金制作"));
