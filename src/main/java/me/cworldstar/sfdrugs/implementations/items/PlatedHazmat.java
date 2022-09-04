@@ -43,13 +43,13 @@ public class PlatedHazmat extends SlimefunArmorPiece implements ProtectiveArmor 
 	public static SlimefunItemStack getByInteger(int i) {
 		switch(i) {
 			case 0:
-				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_HELMET",new ItemStack(Material.NETHERITE_HELMET),"&7强化潜水头盔","","&6全套效果:","&e- 免疫辐射","&e- 免疫蜜蜂蜇","&e- 更多盔甲!");
+				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_HELMET",new ItemStack(Material.NETHERITE_HELMET),"&7强化潜水头盔","","&6全套效果:","&e- 免疫辐射","&e- 蜜蜂毒针保护","&e- 更多盔甲!");
 			case 1:
-				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_CHESTPLATE",new ItemStack(Material.NETHERITE_CHESTPLATE),"&7强化防护服","","&6全套效果:","&e- 免疫辐射","&e- 免疫蜜蜂蜇","&e- 更多盔甲!");
+				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_CHESTPLATE",new ItemStack(Material.NETHERITE_CHESTPLATE),"&7强化防护服","","&6全套效果:","&e- 免疫辐射","&e- 蜜蜂毒针保护","&e- 更多盔甲!");
 			case 2:
-				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_LEGGINGS",new ItemStack(Material.NETHERITE_LEGGINGS),"&7强化防护护腿","","&6全套效果:","&e- 免疫辐射","&e- 免疫蜜蜂蜇","&e- 更多盔甲!");
+				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_LEGGINGS",new ItemStack(Material.NETHERITE_LEGGINGS),"&7强化防护护腿","","&6全套效果:","&e- 免疫辐射","&e- 蜜蜂毒针保护","&e- 更多盔甲!");
 			case 3:
-				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_BOOTS",new ItemStack(Material.NETHERITE_BOOTS),"&7强化防护靴","","&6全套效果:","&e- 免疫辐射","&e- 免疫蜜蜂蜇","&e- 更多盔甲!");
+				return new SlimefunItemStack("SFDRUGS_PLATED_HAZMAT_BOOTS",new ItemStack(Material.NETHERITE_BOOTS),"&7强化防护靴","","&6全套效果:","&e- 免疫辐射","&e- 蜜蜂毒针保护","&e- 更多盔甲!");
 		}
 		return new SlimefunItemStack("SFDRUGS_ERROR", new ItemStack(Material.BARRIER));
 	}
