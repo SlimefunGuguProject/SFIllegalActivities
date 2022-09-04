@@ -93,7 +93,7 @@ public class Items {
 	public static final SlimefunItemStack DRUG_SHOVEL = new SlimefunItemStack("SFDRUGS_DRUG_SHOVEL",Material.NETHERITE_SHOVEL,"&a&l&k|||&r &7&l地面粉碎机&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	public static final SlimefunItemStack DRUG_AXE = new SlimefunItemStack("SFDRUGS_DRUG_AXE",Material.NETHERITE_AXE,"&a&l&k|||&r &7&l电锯&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 
-	public static final SlimefunItemStack HOE = new SlimefunItemStack("SFDRUGS_HOE",Material.WOODEN_HOE,"&d小镇锄头", "","&d&l生成");
+	public static final SlimefunItemStack HOE = new SlimefunItemStack("SFDRUGS_HOE",Material.WOODEN_HOE,"&d小镇锄头", "","&d&l刷怪笼");
 	public static final SlimefunItemStack MYSTERIOUS_TRADER_SUMMONER  = new SlimefunItemStack("SFDRUGS_MYSTERIOUS_TRADER_SUMMONER",Material.CRYING_OBSIDIAN,"&c神秘商人的呼号","",LoreBuilder.RIGHT_CLICK_TO_USE);
 	
 	public static final SlimefunItemStack GAY_PANTS = new SlimefunItemStack("SFDRUGS_GAY_PANTS",Material.LEATHER_LEGGINGS,"&c用过的丁字裤", "", "&c - 他为什么比钻石裤子还强!", "", "&c&l盔甲");
