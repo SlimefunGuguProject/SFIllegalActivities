@@ -58,31 +58,33 @@ public class Items {
 	
 	// Materials
 	
-	public static final ItemStack SFDRUGS_ITEM = new CustomItemStack(Material.SUGAR,"&d&lSFDrugs","","&d> Click to open");
-	public static final SlimefunItemStack RED_PHOSPHORUS = new SlimefunItemStack("SFDRUGS_RED_PHOSPHORUS",Material.REDSTONE,"&cRed Phosphorus","","&c - Distilled meat juice.");
-	public static final SlimefunItemStack PSEUDOEPHEDRINE = new SlimefunItemStack("SFDRUGS_PSEUDOEPHEDRINE",Material.WATER_BUCKET,"&bPseudoephedrine","","&b - Distilled plant juice.");
-	public static final SlimefunItemStack TWELVE = new SlimefunItemStack("SFDRUGS_TWELVE",Material.FIRE_CHARGE,"&412", "", "&4- I'm not too sure where this comes from.");
-	public static final SlimefunItemStack TRAY = new SlimefunItemStack("SFDRUGS_METH_TRAY",Material.HEAVY_WEIGHTED_PRESSURE_PLATE,"&f&lCooking Tray", "" , "&f- For use in a dryer.");
-	public static final SlimefunItemStack METH_COMPOUND = new SlimefunItemStack("SFDRUGS_METH_COMPOUND",Material.DIAMOND,"&9Methamphetamine Compound", "" , "&9 - Pre-dried meth.");
-	public static final SlimefunItemStack DRIED_PLANT = new SlimefunItemStack("SFDRUGS_DRIED_PLANT",Material.OAK_LEAVES,"&2Dried Plants", "" , "&2 - You can use these in the Centrifuge.");
-	public static final SlimefunItemStack MONEY = new SlimefunItemStack("SFDRUGS_MONEY",Material.PAPER,"&a 100 Corporation Currency", "" , "&2 - You can use these for trading with the Corporation.");
+	public static final ItemStack SFDRUGS_ITEM = new CustomItemStack(Material.SUGAR,"&d&lSFDrugs","","&d> 点击打开");
+	public static final SlimefunItemStack RED_PHOSPHORUS = new SlimefunItemStack("SFDRUGS_RED_PHOSPHORUS",Material.REDSTONE,"&c红磷","","&c - 蒸馏肉汁-真的好怪");
+	public static final SlimefunItemStack PSEUDOEPHEDRINE = new SlimefunItemStack("SFDRUGS_PSEUDOEPHEDRINE",Material.WATER_BUCKET,"&b黄碱","","&b - 蒸馏植物汁-还是很怪");
+	public static final SlimefunItemStack TWELVE = new SlimefunItemStack("SFDRUGS_TWELVE",Material.FIRE_CHARGE,"&412", "", "&4- 我不确定他来自哪里");
+	public static final SlimefunItemStack TRAY = new SlimefunItemStack("SFDRUGS_METH_TRAY",Material.HEAVY_WEIGHTED_PRESSURE_PLATE,"&f&l蒸煮盘子", "" , "&f- 在烘干机使用??");
+	public static final SlimefunItemStack METH_COMPOUND = new SlimefunItemStack("SFDRUGS_METH_COMPOUND",Material.DIAMOND,"&9甲基苯丙混合物", "" , "&9 - ...");
+	public static final SlimefunItemStack DRIED_PLANT = new SlimefunItemStack("SFDRUGS_DRIED_PLANT",Material.OAK_LEAVES,"&2干燥的植物", "" , "&2 - 你可以在离心机里使用");
+	public static final SlimefunItemStack MONEY = new SlimefunItemStack("SFDRUGS_MONEY",Material.PAPER,"&a 100货币", "" , "&2 - 你可以用它进行交易");
 	
-	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_RAW = new SlimefunItemStack("SFDRUGS_SIRTHIUM_RAW",Material.SLIME_BLOCK,"&aRaw Sirthium", "",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_PROCESSED = new SlimefunItemStack("SFDRUGS_SIRTHIUM",Material.EMERALD,"&aSirthium Crystal", "",LoreBuilder.radioactive(Radioactivity.HIGH),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_RAW = new SlimefunItemStack("SFDRUGS_SIRTHIUM_RAW",Material.SLIME_BLOCK,"&a生硅", "",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_PROCESSED = new SlimefunItemStack("SFDRUGS_SIRTHIUM",Material.EMERALD,"&a硅水晶", "",LoreBuilder.radioactive(Radioactivity.HIGH),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	public static final ItemStack SIRTHIUM_ALLOY_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkwNzkzZjU2NjE2ZjEwMTUwMmRlMWQzNGViMjU0NGY2MDdkOTg5MDBlMzY5OTM2OTI5NTMxOWU2MzBkY2Y2ZCJ9fX0=");
-	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_ALLOY = new SlimefunItemStack("SFDRUGS_SIRTHIUM_ALLOY",SIRTHIUM_ALLOY_HEAD,"&aSirthium Alloy", "",LoreBuilder.radioactive(Radioactivity.VERY_HIGH),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack IRRADIATED_SIRTHIUM_ALLOY = new SlimefunItemStack("SFDRUGS_SIRTHIUM_ALLOY",SIRTHIUM_ALLOY_HEAD,"&a硅合金", "",LoreBuilder.radioactive(Radioactivity.VERY_HIGH),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 
 	
 	// Drugs
-	public static final SlimefunItemStack SNAIDS = new SlimefunItemStack("SFDRUGS_SNAIDS",Material.HONEY_BOTTLE,"&d&lSnaids","","&d - You might blow up.");
-	public static final SlimefunItemStack CYANIDE = new SlimefunItemStack("SFDRUGS_CYANIDE",Material.CLAY_BALL,"&1Cyanide", "" , "&1 - Eating this will kill you.", "&1 - Why did you even make it?");
-	public static final SlimefunItemStack METH = new SlimefunItemStack("SFDRUGS_METH",Material.SUGAR,"&9Methamphetamine", "" , "&9 - Breaking bad reference.");
+
+	public static final SlimefunItemStack SNAIDS = new SlimefunItemStack("SFDRUGS_SNAIDS",Material.HONEY_BOTTLE,"&d&l胃蛋白酶","","&d - 你可能会爆发");
+	public static final SlimefunItemStack CYANIDE = new SlimefunItemStack("SFDRUGS_CYANIDE",Material.CLAY_BALL,"&1氰化物", "" , "&1 - 吃了他你将会死.", "&1 - 为什么要做他?");
+	public static final SlimefunItemStack METH = new SlimefunItemStack("SFDRUGS_METH",Material.SUGAR,"&9甲基苯丙胺", "" , "&9 - 沃尔特,我现在对你没兴趣");
+
 	
 	// Machines
-	public static final SlimefunItemStack CIRCUIT_FABRICATOR = new SlimefunItemStack("SFDRUGS_MACHINES_CIRCUIT_FABRICATOR",Material.WEATHERED_COPPER,"&7Circuit Fabricator","","&7Automates the production of Basic Circuits.","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
-	public static final SlimefunItemStack MONEY_PRINTER = new SlimefunItemStack("SFDRUGS_MACHINES_MONEY_PRINTER",Material.ANCIENT_DEBRIS,"&7Money Printer","","&7Prints corporation money.","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
-	public static final SlimefunItemStack DRYER = new SlimefunItemStack("SFDRUGS_MACHINES_DRYER",Material.BLAST_FURNACE,"&dDryer","","&d - Dries drug compounds.", "",LoreBuilder.machine(MachineTier.MEDIUM,MachineType.MACHINE));
-	public static final SlimefunItemStack CENTRIFUGE = new SlimefunItemStack("SFDRUGS_MACHINES_CENTRIFUGE",Material.BREWING_STAND,"&dCentrifuge","","&d - Creates drug compounds.", "",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+	public static final SlimefunItemStack CIRCUIT_FABRICATOR = new SlimefunItemStack("SFDRUGS_MACHINES_CIRCUIT_FABRICATOR",Material.WEATHERED_COPPER,"&7电路制造厂","","&7自动生产基础电路","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+	public static final SlimefunItemStack MONEY_PRINTER = new SlimefunItemStack("SFDRUGS_MACHINES_MONEY_PRINTER",Material.ANCIENT_DEBRIS,"&7印钞机","","&7生产钱","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+	public static final SlimefunItemStack DRYER = new SlimefunItemStack("SFDRUGS_MACHINES_DRYER",Material.BLAST_FURNACE,"&d烘干机","","&d - 干燥药品化合物", "",LoreBuilder.machine(MachineTier.MEDIUM,MachineType.MACHINE));
+	public static final SlimefunItemStack CENTRIFUGE = new SlimefunItemStack("SFDRUGS_MACHINES_CENTRIFUGE",Material.BREWING_STAND,"&d离心机","","&d - 创造药品化合物", "",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
 	
 	// LootChests
 	public static final ItemStack RARE_LOOT_CHEST_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWU3ZWY0ZTNmYmFhMGJmNzk5ZGQxMzY5N2UyYzBmMzM5NTVhNGEwZGFiMmYyOTkyZGExN2FhMjllODFhZGY4NyJ9fX0=");
@@ -90,27 +92,29 @@ public class Items {
 	
 	// Tools and the like
 	
-	public static final SlimefunItemStack DRUG_PICKAXE = new SlimefunItemStack("SFDRUGS_DRUG_PICKAXE",Material.NETHERITE_PICKAXE,"&a&l&k|||&r &7&lCorporate Mining Drill&r &a&l&k|||&r","&7Efficiency XV","&7Fortune XV","&7Unbreaking XX","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- Right-Click to enable Silk Touch.","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack DRUG_SHOVEL = new SlimefunItemStack("SFDRUGS_DRUG_SHOVEL",Material.NETHERITE_SHOVEL,"&a&l&k|||&r &7&lCorporate Ground Smasher&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- Right-Click to enable Silk Touch.","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack DRUG_AXE = new SlimefunItemStack("SFDRUGS_DRUG_AXE",Material.NETHERITE_AXE,"&a&l&k|||&r &7&lCorporate Chainsaw&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- Right-Click to enable Silk Touch.","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 
-	public static final SlimefunItemStack HOE = new SlimefunItemStack("SFDRUGS_HOE",Material.WOODEN_HOE,"&dSmall Town Hoe", "","&d&lSPAWNER");
-	public static final SlimefunItemStack MYSTERIOUS_TRADER_SUMMONER  = new SlimefunItemStack("SFDRUGS_MYSTERIOUS_TRADER_SUMMONER",Material.CRYING_OBSIDIAN,"&cMysterious Trader's Callsign","",LoreBuilder.RIGHT_CLICK_TO_USE);
+	public static final SlimefunItemStack DRUG_PICKAXE = new SlimefunItemStack("SFDRUGS_DRUG_PICKAXE",Material.NETHERITE_PICKAXE,"&a&l&k|||&r &7&l采矿钻探机&r &a&l&k|||&r","&7效率15","&7时运15","&7耐久20","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack DRUG_SHOVEL = new SlimefunItemStack("SFDRUGS_DRUG_SHOVEL",Material.NETHERITE_SHOVEL,"&a&l&k|||&r &7&l地面粉碎机&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack DRUG_AXE = new SlimefunItemStack("SFDRUGS_DRUG_AXE",Material.NETHERITE_AXE,"&a&l&k|||&r &7&l电锯&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+
+
+	public static final SlimefunItemStack HOE = new SlimefunItemStack("SFDRUGS_HOE",Material.WOODEN_HOE,"&d小镇锄头", "","&d&l刷怪笼");
+	public static final SlimefunItemStack MYSTERIOUS_TRADER_SUMMONER  = new SlimefunItemStack("SFDRUGS_MYSTERIOUS_TRADER_SUMMONER",Material.CRYING_OBSIDIAN,"&c神秘商人的呼号","",LoreBuilder.RIGHT_CLICK_TO_USE);
 	
-	public static final SlimefunItemStack GAY_PANTS = new SlimefunItemStack("SFDRUGS_GAY_PANTS",Material.LEATHER_LEGGINGS,"&cUsed G-String", "", "&c - This is stronger than diamond!", "", "&c&lARMOR");
+	public static final SlimefunItemStack GAY_PANTS = new SlimefunItemStack("SFDRUGS_GAY_PANTS",Material.LEATHER_LEGGINGS,"&c用过的丁字裤", "", "&c - 他为什么比钻石裤子还强!", "", "&c&l盔甲");
 	public static final ItemStack HOOKER_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjM2ZjE1NDgwZWU0MTRmYWI1ZjU4NWQ1MjUwY2RlYjc1ZTg3M2U3NmYwNzYxYWZmYmRkY2M1MzZjMjkwYWFjNCJ9fX0=");
 	public static final ItemStack CORPORATE_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjZlZTAzYmE4NTBlYmJhMjE3MjFjYjMzN2Y3ZWRlYWI5YjBmYTYxNWE4NjJjNjg3MGNjOWM0ZDA1ZDRkMzJmYSJ9fX0=");
 	public static final ItemStack MYSTEROUS_TRADER_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjJlMzdjNjM2ZmZjYzA1ZjUxOGFiOTdiZjcxMTFjNmQzY2E5NWM1MzAwYzUyZTU2MGMzZGMzNTYzNzZlZWJkYiJ9fX0=");
 	
-	public static final SlimefunItemStack MONEY_STAMP = new SlimefunItemStack("SFDRUGS_MONEY_STAMP",Material.ANVIL,"&7Corporate Money Stamp","",LoreBuilder.radioactive(Radioactivity.LOW));
-	public static final SlimefunItemStack BATON_BLUEPRINT = new SlimefunItemStack("SFDRUGS_BATON_BLUEPRINT",Material.FILLED_MAP,"&7Corporate Baton Blueprint");
-	public static final SlimefunItemStack PICKAXE_BLUEPRINT = new SlimefunItemStack("SFDRUGS_PICKAXE_BLUEPRINT",Material.FILLED_MAP,"&7Corporate Pickaxe Blueprint");
-	public static final SlimefunItemStack AXE_BLUEPRINT = new SlimefunItemStack("SFDRUGS_AXE_BLUEPRINT",Material.FILLED_MAP,"&7Corporate Axe Blueprint");
-	public static final SlimefunItemStack SHOVEL_BLUEPRINT = new SlimefunItemStack("SFDRUGS_SHOVEL_BLUEPRINT",Material.FILLED_MAP,"&7Corporate Shovel Blueprint");
-	public static final SlimefunItemStack DRUG_PIPE = new SlimefunItemStack("SFDRUGS_DRUG_PIPE",Material.STICK,"&cDrug Pipe","","&c- Drag and drop a","&c- drug onto this item","&c- to take drugs without","&c- a side effect.");
+	public static final SlimefunItemStack MONEY_STAMP = new SlimefunItemStack("SFDRUGS_MONEY_STAMP",Material.ANVIL,"&7货币支票","",LoreBuilder.radioactive(Radioactivity.LOW));
+	public static final SlimefunItemStack BATON_BLUEPRINT = new SlimefunItemStack("SFDRUGS_BATON_BLUEPRINT",Material.FILLED_MAP,"&7指挥棒蓝图");
+	public static final SlimefunItemStack PICKAXE_BLUEPRINT = new SlimefunItemStack("SFDRUGS_PICKAXE_BLUEPRINT",Material.FILLED_MAP,"&7采矿钻探机蓝图");
+	public static final SlimefunItemStack AXE_BLUEPRINT = new SlimefunItemStack("SFDRUGS_AXE_BLUEPRINT",Material.FILLED_MAP,"&7电锯蓝图");
+	public static final SlimefunItemStack SHOVEL_BLUEPRINT = new SlimefunItemStack("SFDRUGS_SHOVEL_BLUEPRINT",Material.FILLED_MAP,"&7地面粉碎机蓝图");
+	public static final SlimefunItemStack DRUG_PIPE = new SlimefunItemStack("SFDRUGS_DRUG_PIPE",Material.STICK,"&c药物管","","&c- 拖放一个","&c- 药物还在这个物品上","&c- 禁止擅自服用药物","&c- 会有副作用");
 	
 	// Armor
-		public static final SlimefunItemStack GANGSTER_BOOTS = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_BOOTS,"&cRed Wolves' Boots","",LoreBuilder.material("Woven Micro Sirthium Alloy"));
+		public static final SlimefunItemStack GANGSTER_BOOTS = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_BOOTS,"&c红狼的鞋子","",LoreBuilder.material("用编织过的锡合金制作"));
 	static {
 		LeatherArmorMeta BootsMeta = (LeatherArmorMeta) GANGSTER_BOOTS.getItemMeta();
 		BootsMeta.setColor(Color.RED);
@@ -122,7 +126,7 @@ public class Items {
 		BootsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS,ItemFlag.HIDE_ATTRIBUTES);
 		GANGSTER_BOOTS.setItemMeta(BootsMeta);
 	}	
-	public static final SlimefunItemStack GANGSTER_LEGGINGS = new SlimefunItemStack("SFDRUGS_GANGSTER_LEGGINGS",Material.LEATHER_LEGGINGS,"&c Red Wolves' Jeans","",LoreBuilder.material("Woven Micro-Sirthium"));
+	public static final SlimefunItemStack GANGSTER_LEGGINGS = new SlimefunItemStack("SFDRUGS_GANGSTER_LEGGINGS",Material.LEATHER_LEGGINGS,"&c 红狼的牛仔裤","",LoreBuilder.material("用编织过的锡制作"));
 	
 	static {
 		LeatherArmorMeta LeggingsMeta = (LeatherArmorMeta) GANGSTER_LEGGINGS.getItemMeta();
@@ -137,7 +141,9 @@ public class Items {
 	}
 
 	
-	public static final SlimefunItemStack GANGSTER_CHESTPLATE = new SlimefunItemStack("SFDRUGS_GANGSTER_CHESTPLATE",Material.LEATHER_CHESTPLATE,"&cRed Wolves' Vest","",LoreBuilder.material("Woven Micro Sirthium Alloy"));
+
+	public static final SlimefunItemStack GANGSTER_CHESTPLATE = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_CHESTPLATE,"&c红狼的背心","",LoreBuilder.material("用编织过的锡合金制作"));
+
 	static {
 		GANGSTER_CHESTPLATE.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
 		LeatherArmorMeta ChestplateMeta = (LeatherArmorMeta) GANGSTER_CHESTPLATE.getItemMeta();
@@ -155,11 +161,11 @@ public class Items {
 	
 	
 	
-	public static final SlimefunItemStack DRUG_CHESTPLATE = new SlimefunItemStack("SFDRUGS_DRUG_CHESTPLATE",Material.NETHERITE_CHESTPLATE,"&a&l&k|||&r &7&lCorporate Hazmat Suit Top&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7Full Set Effects:","&e- Radiation immunity");
-	public static final SlimefunItemStack DRUG_HELMET = new SlimefunItemStack("SFDRUGS_DRUG_HELMET",Material.NETHERITE_HELMET,"&a&l&k|||&r &7&lCorporate Hazmat Gas Mask&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7Full Set Effects:","&e- Radiation immunity");
-	public static final SlimefunItemStack DRUG_BOOTS = new SlimefunItemStack("SFDRUGS_DRUG_BOOTS",Material.NETHERITE_BOOTS,"&a&l&k|||&r &7&lCorporate Hazmat Boots&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7Full Set Effects:","&e- Radiation immunity");
-	public static final SlimefunItemStack DRUG_LEGGINGS = new SlimefunItemStack("SFDRUGS_DRUG_LEGGINGS",Material.NETHERITE_LEGGINGS,"&a&l&k|||&r &7&lCorporate Hazmat Suit Bottom&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7Full Set Effects:","&e- Radiation immunity");
-	public static final SlimefunItemStack DRUG_BATON = new SlimefunItemStack("SFDRUGS_DRUG_BATON",Material.NETHERITE_SWORD,"&a&l&k|||&r &7&lCorporate Electric Baton&r &a&l&k|||&r", "", LoreBuilder.material("Irradiated Sirthium"), "",LoreBuilder.powerCharged(0, 4800), "", LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack DRUG_CHESTPLATE = new SlimefunItemStack("SFDRUGS_DRUG_CHESTPLATE",Material.NETHERITE_CHESTPLATE,"&a&l&k|||&r &7&l防护上衣&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7全套效果:","&e- 免疫辐射");
+	public static final SlimefunItemStack DRUG_HELMET = new SlimefunItemStack("SFDRUGS_DRUG_HELMET",Material.NETHERITE_HELMET,"&a&l&k|||&r &7&l防毒面具&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7全套效果:","&e- 免疫辐射");
+	public static final SlimefunItemStack DRUG_BOOTS = new SlimefunItemStack("SFDRUGS_DRUG_BOOTS",Material.NETHERITE_BOOTS,"&a&l&k|||&r &7&l防护靴&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7全套效果:","&e- 免疫辐射");
+	public static final SlimefunItemStack DRUG_LEGGINGS = new SlimefunItemStack("SFDRUGS_DRUG_LEGGINGS",Material.NETHERITE_LEGGINGS,"&a&l&k|||&r &7&l防护护腿&r &a&l&k|||&r", "", LoreBuilder.material("Super-Compressed Carbon"), "",LoreBuilder.powerCharged(0, 1200), "", "&7全套效果:","&e- 免疫辐射");
+	public static final SlimefunItemStack DRUG_BATON = new SlimefunItemStack("SFDRUGS_DRUG_BATON",Material.NETHERITE_SWORD,"&a&l&k|||&r &7&l电棍&r &a&l&k|||&r", "", LoreBuilder.material("Irradiated Sirthium"), "",LoreBuilder.powerCharged(0, 4800), "", LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	
 	public static final SlimefunItemStack DRUG_HELMET_BLUEPRINT = new Blueprint("Corporate Hazmat Gas Mask").getBlueprint();
 	public static final SlimefunItemStack DRUG_CHESTPLATE_BLUEPRINT = new Blueprint("Corporate Hazmat Suit Top").getBlueprint();
@@ -172,33 +178,34 @@ public class Items {
 	public static final ItemStack MYSTERIOUS_TRADER_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjJlMzdjNjM2ZmZjYzA1ZjUxOGFiOTdiZjcxMTFjNmQzY2E5NWM1MzAwYzUyZTU2MGMzZGMzNTYzNzZlZWJkYiJ9fX0=");
 	public static final ItemStack ROBOT_HELMET_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjNhOWMyZmI3NTVmNzA4ZjdkYjJkZDI5MGFlYzRlYzlmMjM5ZDVlZTYyZGI1ZDQzNDRlYzdlODgyMTg3OGY4MiJ9fX0=");
 	public static final ItemStack CORPORATE_ANDROID_CORE_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjg4MTMwOTI1NmEwNjQxMzVjMDlkNDhiNzM4ODgxYzcwMmU5Y2RjMTMwNjJkYzk5MjdjZWM0ZWM0ZmU1ZWQ3YiJ9fX0=");
-	public static final SlimefunItemStack CORPORATION_ROBOT_HELMET = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_HELMET",ROBOT_HELMET_HEAD,"&a&l&k|||&r &7&lCorporate Security Robot Head&r &a&l&k|||&r","&7Blast Protection C","&7Unbreaking C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack CORPORATION_ROBOT_CHESTPLATE = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_CHESTPLATE",Material.NETHERITE_CHESTPLATE,"&a&l&k|||&r &7&lCorporate Security Robot Chest&r &a&l&k|||&r","&7Blast Protection C","&7Unbreaking C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack CORPORATION_ROBOT_LEGGINGS = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_LEGGINGS",Material.NETHERITE_LEGGINGS,"&a&l&k|||&r &7&lCorporate Security Robot Legs&r &a&l&k|||&r","&7Blast Protection C","&7Unbreaking C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack CORPORATION_ROBOT_BOOTS = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_BOOTS",Material.NETHERITE_BOOTS,"&a&l&k|||&r &7&lCorporate Security Robot Feet&r &a&l&k|||&r","&7Blast Protection C","&7Unbreaking C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
-	public static final SlimefunItemStack CORPORATION_LASER_SWORD = new SlimefunItemStack("SFDRUGS_CORPORATION_LASER_SWORD",Material.STONE_SWORD,"&a&l&k|||&r &7&lCorporate Particle Sword&r &a&l&k|||&r","&7Decay C","&7Unbreaking C","","&7 => This item is unusable when not charged.","",LoreBuilder.material("Dark Energy Projector"),LoreBuilder.powerCharged(0, 12800),"",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack CORPORATION_ROBOT_HELMET = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_HELMET",ROBOT_HELMET_HEAD,"&a&l&k|||&r &7&l安全机器人头&r &a&l&k|||&r","&7爆炸保护 C","&7耐久 C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack CORPORATION_ROBOT_CHESTPLATE = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_CHESTPLATE",Material.NETHERITE_CHESTPLATE,"&a&l&k|||&r &7&l安全机器人身体&r &a&l&k|||&r","&7爆炸保护 C","&7耐久 C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack CORPORATION_ROBOT_LEGGINGS = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_LEGGINGS",Material.NETHERITE_LEGGINGS,"&a&l&k|||&r &7&l安全机器人的腿&r &a&l&k|||&r","&7爆炸保护 C","&7耐久 C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack CORPORATION_ROBOT_BOOTS = new SlimefunItemStack("SFDRUGS_CORPORATION_ROBOT_BOOTS",Material.NETHERITE_BOOTS,"&a&l&k|||&r &7&l安全机器人的脚&r &a&l&k|||&r","&7爆炸保护 C","&7耐久 C","",LoreBuilder.material("Sirthium-Infused Alloy"),LoreBuilder.powerCharged(0, 19000),"",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+	public static final SlimefunItemStack CORPORATION_LASER_SWORD = new SlimefunItemStack("SFDRUGS_CORPORATION_LASER_SWORD",Material.STONE_SWORD,"&a&l&k|||&r &7&l粒子剑&r &a&l&k|||&r","&7衰变 C","&7耐久 C","","&7 => 该物品未充电时不可用.","",LoreBuilder.material("Dark Energy Projector"),LoreBuilder.powerCharged(0, 12800),"",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	
 	
 	
 	static {
-		ROBOT_HELMET_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&a&l&k|||&r &7Corporate Security Robot Head&r &a&l&k|||&r"));
-		HOOKER_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&dHooker Zombie"));
-		CORPORATE_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&7Corporate Transaction"));
-		MYSTEROUS_TRADER_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&cMysterious Trader"));
-		CORPORATE_ANDROID_CORE_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&5&lCorporate Android Core"));
-		SIRTHIUM_ALLOY_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&a&lSirthium Alloy"));
+		ROBOT_HELMET_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&a&l&k|||&r &7安全机器人头&r &a&l&k|||&r"));
+		HOOKER_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&d胡克僵尸"));
+		CORPORATE_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&7交易"));
+		MYSTEROUS_TRADER_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&c神秘交易人"));
+		CORPORATE_ANDROID_CORE_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&5&lAndroid核心"));
+		SIRTHIUM_ALLOY_HEAD.getItemMeta().setDisplayName(ChatColor.translateAlternateColorCodes('&', "&a&l锡合金"));
 
 	}
-	public static final SlimefunItemStack HOOKER_GROUP = new SlimefunItemStack("HOOKER_GROUP",HOOKER_HEAD,"&dHooker Zombie");
-	public static final SlimefunItemStack CORPORATE_GROUP = new SlimefunItemStack("CORPORATE_GROUP",CORPORATE_HEAD,"&7Corporation Trading");
-	public static final SlimefunItemStack CORPORATE_TRADING_TERMINAL = new SlimefunItemStack("SFDRUGS_CORPORATION_TRADING_TERMINAL",CORPORATE_HEAD,"&7Corporation Trading Terminal","",LoreBuilder.powerPerSecond(1280),"",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED,"",LoreBuilder.RIGHT_CLICK_TO_OPEN);
-	public static final SlimefunItemStack CORPORATE_ANDROID_CORE = new SlimefunItemStack("SFDRUGS_CORPORATION_ANDROID_CORE",CORPORATE_ANDROID_CORE_HEAD,"&5&lCorporate Android Core", "&5⇒ Made from re&5&ka&r&5l &5&kdark&r &5m&5&katter&r!", "", "&e&l⚠ Warning! Highly Unstable! ⚠");
+	public static final SlimefunItemStack HOOKER_GROUP = new SlimefunItemStack("HOOKER_GROUP",HOOKER_HEAD,"&d胡克僵尸");
+	public static final SlimefunItemStack CORPORATE_GROUP = new SlimefunItemStack("CORPORATE_GROUP",CORPORATE_HEAD,"&7交易");
+	public static final SlimefunItemStack CORPORATE_TRADING_TERMINAL = new SlimefunItemStack("SFDRUGS_CORPORATION_TRADING_TERMINAL",CORPORATE_HEAD,"&7神秘交易人","",LoreBuilder.powerPerSecond(1280),"",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED,"",LoreBuilder.RIGHT_CLICK_TO_OPEN);
+	public static final SlimefunItemStack CORPORATE_ANDROID_CORE = new SlimefunItemStack("SFDRUGS_CORPORATION_ANDROID_CORE",CORPORATE_ANDROID_CORE_HEAD,"&5&lAndroid核心", "&5⇒ 用  re&5&ka&r&5l 制造 &5&k黑暗&r &5m&5&卡特&r!", "", "&e&l⚠ Warning! 非常不稳定! ⚠");
 	public static final MachineRecipeType CORPORATION_TRADE = new MachineRecipeType("CORPORATION_TRADER",Items.CORPORATE_GROUP);
-	public static final SlimefunItemStack ELECTRIC_SHEARS = new SlimefunItemStack("SFDRUGS_ELECTRIC_SHEARS",Material.SHEARS,"&7Electric Shears","",LoreBuilder.powerCharged(0, 1280),"",LoreBuilder.radioactive(Radioactivity.LOW));
-	public static final SlimefunItemStack UNCOMMON_CHEST = new SlimefunItemStack("SFDRUGS_UNCOMMON_LOOT_CHEST",Items.UNCOMMON_LOOT_CHEST_HEAD,"&aUncommon Loot Chest","",LoreBuilder.RIGHT_CLICK_TO_USE);
-	public static final SlimefunItemStack RARE_CHEST = new SlimefunItemStack("SFDRUGS_RARE_LOOT_CHEST",Items.RARE_LOOT_CHEST_HEAD,"&bRare Loot Chest","",LoreBuilder.RIGHT_CLICK_TO_USE);
-	public static final SlimefunItemStack MYSTEROUS_TRADER = new SlimefunItemStack("MYSTERIOUS_TRADER_GROUJP",MYSTEROUS_TRADER_HEAD,"&cMysterious Trader");
-	private static final SlimefunItemStack ROBOT_HEAD = new SlimefunItemStack("ROBOT_HEAD_GROUP",ROBOT_HELMET_HEAD,"&7Boss Drops");;
+
+	public static final SlimefunItemStack ELECTRIC_SHEARS = new SlimefunItemStack("SFDRUGS_ELECTRIC_SHEARS",Material.SHEARS,"&7电动剪刀","",LoreBuilder.powerCharged(0, 1280),"",LoreBuilder.radioactive(Radioactivity.LOW));
+	
+	public static final SlimefunItemStack MYSTEROUS_TRADER = new SlimefunItemStack("MYSTERIOUS_TRADER_GROUJP",MYSTEROUS_TRADER_HEAD,"&c神秘交易人");
+	private static final SlimefunItemStack ROBOT_HEAD = new SlimefunItemStack("ROBOT_HEAD_GROUP",ROBOT_HELMET_HEAD,"&7boss掉落");;
+
 	static {
 		
 		CORPORATION_ROBOT_HELMET.addUnsafeEnchantment(Enchantment.DURABILITY, 100);
@@ -337,8 +344,10 @@ public class Items {
 		RecipeType MYSTERIOUS_TRADER = new RecipeType(new NamespacedKey(this.plugin,"MYSTERIOUS_TRADER"),Items.MYSTEROUS_TRADER);
 		RecipeType SECURITY_ROBOT_DROP = new RecipeType(new NamespacedKey(this.plugin,"SECURITY_ROBOT_DROP"),Items.ROBOT_HEAD);
 		
-		new UncommonChest(this.plugin,this.group,UNCOMMON_CHEST,SECURITY_ROBOT_DROP,new ItemStack[]{}).register(this.plugin);
-		new RareChest(this.plugin,this.group,RARE_CHEST,SECURITY_ROBOT_DROP,new ItemStack[]{}).register(this.plugin);
+
+		new SlimefunItem(this.group,new SlimefunItemStack("SFDRUGS_UNCOMMON_LOOT_CHEST",Items.UNCOMMON_LOOT_CHEST_HEAD,"&a不常见的战利品箱子","",LoreBuilder.RIGHT_CLICK_TO_USE),SECURITY_ROBOT_DROP,new ItemStack[]{}).register(this.plugin);
+		new SlimefunItem(this.group,new SlimefunItemStack("SFDRUGS_RARE_LOOT_CHEST",Items.RARE_LOOT_CHEST_HEAD,"&b罕见的战利品箱子","",LoreBuilder.RIGHT_CLICK_TO_USE),SECURITY_ROBOT_DROP,new ItemStack[]{}).register(this.plugin);
+
 
 		
 		new PlatedHazmat(this.plugin,this.group,PlatedHazmat.getByInteger(0),RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[] {
@@ -374,7 +383,7 @@ public class Items {
 				new PotionEffect(PotionEffectType.JUMP,60,1)
 		});
 		
-		new Hook(this.plugin,this.group,new SlimefunItemStack("SFDRUGS_GANGSTER_HOOK",Material.CHAIN,"&cRed Wolves' Hook & Chain","",LoreBuilder.RIGHT_CLICK_TO_USE),SECURITY_ROBOT_DROP,new ItemStack[] {}).register(this.plugin);
+		new Hook(this.plugin,this.group,new SlimefunItemStack("SFDRUGS_GANGSTER_HOOK",Material.CHAIN,"&c红狼的锁链","",LoreBuilder.RIGHT_CLICK_TO_USE),SECURITY_ROBOT_DROP,new ItemStack[] {}).register(this.plugin);
 		new SlimefunItem(this.group,Items.ELECTRIC_SHEARS,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[] {
 				new ItemStack(Material.SHEARS),new CustomItemStack(SlimefunItems.BATTERY)
 		}).register(this.plugin);
