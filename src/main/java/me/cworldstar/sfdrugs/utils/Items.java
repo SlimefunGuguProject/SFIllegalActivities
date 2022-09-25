@@ -115,6 +115,9 @@ public class Items {
 	
 	// Armor
 		public static final SlimefunItemStack GANGSTER_BOOTS = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_BOOTS,"&c红狼的鞋子","",LoreBuilder.material("用编织过的锡合金制作"));
+	public static Material UNCOMMON_CHEST;
+	public static Material RARE_CHEST;
+
 	static {
 		LeatherArmorMeta BootsMeta = (LeatherArmorMeta) GANGSTER_BOOTS.getItemMeta();
 		BootsMeta.setColor(Color.RED);
@@ -142,7 +145,7 @@ public class Items {
 
 	
 
-	public static final SlimefunItemStack GANGSTER_CHESTPLATE = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_CHESTPLATE,"&c红狼的背心","",LoreBuilder.material("用编织过的锡合金制作"));
+	public static final SlimefunItemStack GANGSTER_CHESTPLATE = new SlimefunItemStack("SFDRUGS_GANGSTER_CHESTPLATE",Material.LEATHER_CHESTPLATE,"&c红狼的背心","",LoreBuilder.material("用编织过的锡合金制作"));
 
 	static {
 		GANGSTER_CHESTPLATE.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
@@ -596,5 +599,6 @@ public class Items {
 		});
 		CENTRIFUGE.register(this.plugin);
 	}
-	
+
+    public enum UNCOMMON_CHEST {}
 }

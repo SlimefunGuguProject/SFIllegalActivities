@@ -9,6 +9,7 @@ import java.util.function.BiConsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPluginLoader;
@@ -32,7 +33,7 @@ import me.cworldstar.sfdrugs.implementations.events.ArmorListener;
 import me.cworldstar.sfdrugs.utils.Items;
 import me.cworldstar.sfdrugs.utils.RandomUtils;
 import me.cworldstar.sfdrugs.utils.Trading;
-
+import net.guizhanss.guizhanlibplugin.updater.GuizhanBuildsUpdaterWrapper;
 public class SFDrugs extends AbstractAddon implements SlimefunAddon {
     public SFDrugs(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
         super(loader, description, dataFolder, file,
@@ -47,6 +48,10 @@ public class SFDrugs extends AbstractAddon implements SlimefunAddon {
     @SuppressWarnings("unused")
 	@Override
 	public void enable() {
+		if (getConfig().getBoolean("options.auto-update") && // 注意这里，如果config.yml中直接是`auto-config`那就得把前面的`options.`去掉
+				getDescription().getVersion().startsWith("Build")) { // 如果你修改了版本格式，按需修改。你也可以去除这一部分
+			new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "SFIllegalActivities", "master", false, "zh-CN").start(); // 必须修改
+		}
     	Items ItemRegistry = new Items(this);
 		getServer().getPluginManager().registerEvents(new ArmorListener(new ArrayList<String>()), this);
 		CustomMobDeathEvent DeathEvent = new CustomMobDeathEvent(this);

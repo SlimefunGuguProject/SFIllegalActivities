@@ -1,5 +1,6 @@
 package me.cworldstar.sfdrugs.events;
 
+import org.bukkit.Material;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,6 +17,8 @@ import me.cworldstar.sfdrugs.utils.RandomUtils;
 
 public class CustomMobDeathEvent implements Listener {
 	private SFDrugs plugin;
+	private Material RARE_CHEST;
+
 	public CustomMobDeathEvent(SFDrugs plugin) {
 		this.plugin = plugin;
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
@@ -29,22 +32,22 @@ public class CustomMobDeathEvent implements Listener {
 			e.getDrops().clear();
 			switch(Identifier) {
 				case "red_wolves_trainee":
-					e.getDrops().add(new CustomItemStack(Items.UNCOMMON_CHEST,1));
+					e.getDrops().add(new CustomItemStack(Items.UNCOMMON_CHEST, String.valueOf(1)));
 					e.getDrops().addAll(new SmallerGangMemberLootTable(this.plugin).populateLoot(RandomUtils.getRandom(),new LootContext.Builder(killedMob.getLocation()).build()));
 					break;
 				case "corporate_security_robot":
-					e.getDrops().add(new CustomItemStack(Items.RARE_CHEST,1));
+					e.getDrops().add(new CustomItemStack(Items.RARE_CHEST, String.valueOf(1)));
 
 					e.getDrops().addAll(new CorporationEnemyLootTable(this.plugin).populateLoot(RandomUtils.getRandom(),new LootContext.Builder(killedMob.getLocation()).build()));
 					break;
 				case "escaped_test_subject":
 					//TODO: Loot table for this guy.
 					e.setDroppedExp(7640000);
-					e.getDrops().add(new CustomItemStack(Items.RARE_CHEST,3));
+					e.getDrops().add(new CustomItemStack(RARE_CHEST, String.valueOf(3)));
 					e.getDrops().addAll(new EscapedTestSubjectLootTable(this.plugin).populateLoot(RandomUtils.getRandom(),new LootContext.Builder(killedMob.getLocation()).build()));
 					break;
 				case "red_wolves_gangster":
-					e.getDrops().add(new CustomItemStack(Items.UNCOMMON_CHEST,2));
+					e.getDrops().add(new CustomItemStack(Items.UNCOMMON_CHEST, String.valueOf(2)));
 					//TODO: Loot table for this guy.
 
 					break;
@@ -52,5 +55,8 @@ public class CustomMobDeathEvent implements Listener {
 					break;
 			}
 		}
+	}
+
+	private class RARE_CHEST {
 	}
 }
