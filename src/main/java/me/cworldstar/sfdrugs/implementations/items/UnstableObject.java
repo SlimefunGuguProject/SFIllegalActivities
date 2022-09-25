@@ -25,6 +25,7 @@ public class UnstableObject extends SlimefunItem {
 		super(itemGroup,item,recipeType, recipe);
 		this.unstable = unstable;
 		UnstableObject.plugin = plugin;
+		item.getItemMeta().getPersistentDataContainer().set(new NamespacedKey(this.plugin,"Unstable"), PersistentDataType.INTEGER,unstable.UNSTABLE_VALUE);
 		// TODO Auto-generated constructor stub
 	}
 	public Unstable getUnstableAmount() {
@@ -65,6 +66,26 @@ public class UnstableObject extends SlimefunItem {
 				}
 			}
 			return STABLE;
+		}
+		
+		public static double getCooldown(Unstable unstable) {
+			
+			switch(unstable) {
+				case STABLE:
+					return 0.0;
+				case SLIGHTLY_UNSTABLE:
+					return 15.0;
+				case UNSTABLE:
+					return 15.0;
+				case HIGHLY_UNSTABLE:
+					return 10.0;
+				default:
+					break;
+				
+			}
+			
+			return 0.0;
+			
 		}
 		
 	}

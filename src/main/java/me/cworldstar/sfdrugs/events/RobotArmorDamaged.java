@@ -41,37 +41,58 @@ public class RobotArmorDamaged implements Listener {
 					 }
 				}
 			}
-    	} Old Implementation */
+    	}  */
+    	/**
+    	 * 
+    	 * New Implementation of RobotArmorSet.
+    	 * Still bugs w/ security robot.
+    	 * 
+    	 * @author cworldstar
+    	 */
 		if (RobotArmorSet.WearingMostArmorSet(p)) {
 			RobotArmorSet.RemoveSetItemCharge(RobotArmorSet.ToRobotArmor(p.getEquipment().getArmorContents()),e.getDamage(),e);
-			for(Entity enemies : p.getNearbyEntities(3.0, 3.0, 3.0)) {
-				if(enemies instanceof LivingEntity) {
-					if(RobotArmor.IsNotAffected((LivingEntity) enemies) & (!enemies.equals(p))) {
-						enemies.getWorld().playEffect(enemies.getLocation(), Effect.BONE_MEAL_USE, 12);
-						((LivingEntity) enemies).damage(new Double(e.getDamage() / 2),p);
+			for(ItemStack ArmorPiece : p.getEquipment().getArmorContents()) {
+				if(SlimefunItem.getByItem(ArmorPiece) instanceof RobotArmor) {
+					((RobotArmor) SlimefunItem.getByItem(ArmorPiece)).EntityDamaged(e, p, ArmorPiece, e.getFinalDamage());
+					for(Entity enemies : p.getNearbyEntities(3.0, 3.0, 3.0)) {
+						if(enemies instanceof LivingEntity) {
+							if(RobotArmor.IsNotAffected((LivingEntity) enemies) && (!enemies.equals(p))) {
+								enemies.getWorld().playEffect(enemies.getLocation(), Effect.BONE_MEAL_USE, 12);
+								((LivingEntity) enemies).damage(new Double(e.getDamage() / 2),p);
+							}
+						}
 					}
+					break;
 				}
 			}
+
 		}
     }
     private void HandlePlayer(EntityDamageByEntityEvent e,Player p) {
     	if(p.getEquipment().getChestplate() != null) {
 			if (RobotArmorSet.WearingMostArmorSet(p)) {
 				RobotArmorSet.RemoveSetItemCharge(RobotArmorSet.ToRobotArmor(p.getInventory().getArmorContents()),e.getDamage(),e);
-				for(Entity enemies : p.getNearbyEntities(3.0, 3.0, 3.0)) {
-					if(enemies instanceof LivingEntity) {
-						if(RobotArmor.IsNotAffected((LivingEntity) enemies) & (!enemies.equals(p))) {
-							enemies.getWorld().playEffect(enemies.getLocation(), Effect.BONE_MEAL_USE, 12);
-							((LivingEntity) enemies).damage(new Double(e.getDamage() / 2),p);
+				for(ItemStack ArmorPiece : p.getEquipment().getArmorContents()) {
+					if(SlimefunItem.getByItem(ArmorPiece) instanceof RobotArmor) {
+						((RobotArmor) SlimefunItem.getByItem(ArmorPiece)).PlayerDamaged(e, p, ArmorPiece, e.getFinalDamage());
+						for(Entity enemies : p.getNearbyEntities(3.0, 3.0, 3.0)) {
+							if(enemies instanceof LivingEntity) {
+								if(RobotArmor.IsNotAffected((LivingEntity) enemies) && (!enemies.equals(p))) {
+									enemies.getWorld().playEffect(enemies.getLocation(), Effect.BONE_MEAL_USE, 12);
+									((LivingEntity) enemies).damage(new Double(e.getDamage() / 2),p);
+								}
+							 }
 						}
-					 }
+						break;
+					}
 				}
+
 			}
     	}
     }
 	@EventHandler
 	private void onEntityDamage(EntityDamageByEntityEvent e) {
-		if (!e.getEntity().hasMetadata("AFFLICTED_BY_SFDRUGS_ROBOT_ARMOR") & (e.getEntity() instanceof Player || e.getEntity() instanceof Mob)) {
+		if (!e.getEntity().hasMetadata("AFFLICTED_BY_SFDRUGS_ROBOT_ARMOR") && (e.getEntity() instanceof Player || e.getEntity() instanceof Mob)) {
 			if(e.getEntity() instanceof Player) {
 				Player p = (Player) e.getEntity(); 
 				this.HandlePlayer(e, p);

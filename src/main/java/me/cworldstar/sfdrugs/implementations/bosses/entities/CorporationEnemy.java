@@ -20,6 +20,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Snowball;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -38,6 +39,8 @@ public class CorporationEnemy {
 		z.setCanPickupItems(false);
 		z.setMaxHealth(300.0);
 		z.setHealth(300.0);
+		z.setRemoveWhenFarAway(false);
+		z.setMetadata("SFDRUGS_CUSTOM_MOB",new FixedMetadataValue(Plugin,"corporate_security_robot"));
 		z.setAdult();
 		z.setCanPickupItems(false);
 		z.setAbsorptionAmount(200.0);
@@ -85,7 +88,7 @@ public class CorporationEnemy {
 							new Speak(z,z.getNearbyEntities(10.0, 10.0, 10.0),"&7&l[ Corporate Security Robot ]:&r &7Target Confirmed.");
 							z.getWorld().playSound(z.getLocation(), Sound.BLOCK_AMETHYST_BLOCK_CHIME, 1F, 0.5F);
 							z.getWorld().spawnParticle(Particle.DRAGON_BREATH, z.getLocation(),30, 6, 2, 6);
-							z.getWorld().createExplosion(z.getTarget().getLocation().add(new Location(z.getWorld(),z.getTarget().getLocation().getX(),z.getTarget().getLocation().getY()+2,z.getTarget().getLocation().getZ())), 2L, false,false);
+							z.getWorld().createExplosion(z.getTarget().getLocation().add(new Location(z.getWorld(),z.getTarget().getLocation().getX(),z.getTarget().getLocation().getY()+2,z.getTarget().getLocation().getZ())), 2L, false,false,z);
 							break;
 						case 2:
 							new Speak(z,z.getNearbyEntities(10.0, 10.0, 10.0),"&7&l[ Corporate Security Robot ]:&r &7Damage Detected. Beginning self repair.");
@@ -99,7 +102,7 @@ public class CorporationEnemy {
 									z.setInvulnerable(true);
 									z.getWorld().playSound(z.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1F, 0.5F);
 									z.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, z.getLocation(),30, 6, 2, 6);
-									z.getWorld().createExplosion(z.getLocation(), 8L, false,false);
+									z.getWorld().createExplosion(z.getLocation(), 8L, false,false,z);
 									z.setInvulnerable(false);
 								}
 								

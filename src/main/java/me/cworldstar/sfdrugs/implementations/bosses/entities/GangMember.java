@@ -11,7 +11,6 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.boss.BarColor;
-import org.bukkit.boss.BarFlag;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.enchantments.Enchantment;
@@ -19,30 +18,32 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.LlamaSpit;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Snowball;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.cworldstar.sfdrugs.SFDrugs;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
 
 import me.cworldstar.sfdrugs.implementations.loot.CorporationEnemyLootTable;
 import me.cworldstar.sfdrugs.utils.ParticleUtils;
+import me.cworldstar.sfdrugs.utils.RandomUtils;
 import me.cworldstar.sfdrugs.utils.Speak;
 import net.md_5.bungee.api.ChatColor;
 
 public class GangMember {
+	@SuppressWarnings("deprecation")
 	public GangMember(SFDrugs plugin,Zombie z) {
 		z.setCustomName(ChatColor.translateAlternateColorCodes('&', "&c&l&k|||&r &4&l⚠ Red Wolves Gangster ⚠&r &c&l&k|||&r"));
 		z.setMaxHealth(750.0);
 		z.setHealth(750.0);
+		z.setRemoveWhenFarAway(false);
 		z.setAdult();
+		z.setMetadata("SFDRUGS_CUSTOM_MOB",new FixedMetadataValue(plugin,"red_wolves_gangster"));
 		z.setCanPickupItems(false);		
 		z.setLootTable(new CorporationEnemyLootTable(plugin));
 		BossBar EnemyBossBar = Bukkit.getServer().createBossBar(ChatColor.translateAlternateColorCodes('&',"&c&l&k|||&r &4&l⚠ Red Wolves Gangster ⚠&r &c&l&k|||&r"),BarColor.RED, BarStyle.SEGMENTED_12);
@@ -145,8 +146,9 @@ public class GangMember {
 							}
 						case 2:
 							new Speak(z,z.getNearbyEntities(15.0, 15.0, 15.0),"&c&l[&k|||&r &4&l⚠ Red Wolves Gangster ⚠&r &c&l&k|||&r&c&l]:&r &cJust die!");
-							for(int i=0;i<4;i++) {
+							for(int i=0;i<=2;i++) {
 								LlamaSpit LaserProjectile = z.launchProjectile(LlamaSpit.class);
+								LaserProjectile.setMetadata("SFDRUGS_IS_LASER_PROJECTILE", new FixedMetadataValue(plugin,RandomUtils.nextInt(10).floatValue()));
 								Vector source = z.getLocation().getDirection().normalize().multiply(50);
 								Vector v = z.getTarget().getLocation().toVector().subtract(source);
 								BukkitTask LaserProjectileVelocityTask = new BukkitRunnable() {
@@ -172,7 +174,7 @@ public class GangMember {
 										}
 										this.cancel();
 									}
-								}.runTaskLater(plugin, 100L); // Remove after 10 seconds
+								}.runTaskLater(plugin, 100L); // Remove after 5 seconds
 								break;
 							}
 						default:

@@ -46,8 +46,10 @@ import me.cworldstar.sfdrugs.implementations.items.IrradiatedItem;
 import me.cworldstar.sfdrugs.implementations.items.LaserSword;
 import me.cworldstar.sfdrugs.implementations.items.MoneyStamp;
 import me.cworldstar.sfdrugs.implementations.items.PlatedHazmat;
+import me.cworldstar.sfdrugs.implementations.items.RareChest;
 import me.cworldstar.sfdrugs.implementations.items.RobotArmorSet;
 import me.cworldstar.sfdrugs.implementations.items.Snaids;
+import me.cworldstar.sfdrugs.implementations.items.UncommonChest;
 import me.cworldstar.sfdrugs.implementations.items.UnstableObject;
 import me.cworldstar.sfdrugs.implementations.items.UnstableObject.Unstable;
 import net.md_5.bungee.api.ChatColor;
@@ -72,9 +74,11 @@ public class Items {
 
 	
 	// Drugs
+
 	public static final SlimefunItemStack SNAIDS = new SlimefunItemStack("SFDRUGS_SNAIDS",Material.HONEY_BOTTLE,"&d&l胃蛋白酶","","&d - 你可能会爆发");
 	public static final SlimefunItemStack CYANIDE = new SlimefunItemStack("SFDRUGS_CYANIDE",Material.CLAY_BALL,"&1氰化物", "" , "&1 - 吃了他你将会死.", "&1 - 为什么要做他?");
 	public static final SlimefunItemStack METH = new SlimefunItemStack("SFDRUGS_METH",Material.SUGAR,"&9甲基苯丙胺", "" , "&9 - 沃尔特,我现在对你没兴趣");
+
 	
 	// Machines
 	public static final SlimefunItemStack CIRCUIT_FABRICATOR = new SlimefunItemStack("SFDRUGS_MACHINES_CIRCUIT_FABRICATOR",Material.WEATHERED_COPPER,"&7电路制造厂","","&7自动生产基础电路","",LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
@@ -86,12 +90,13 @@ public class Items {
 	public static final ItemStack RARE_LOOT_CHEST_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWU3ZWY0ZTNmYmFhMGJmNzk5ZGQxMzY5N2UyYzBmMzM5NTVhNGEwZGFiMmYyOTkyZGExN2FhMjllODFhZGY4NyJ9fX0=");
 	public static final ItemStack UNCOMMON_LOOT_CHEST_HEAD = SlimefunUtils.getCustomHead("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWE5OGEzMjVmMGIzN2NkMjcwZjU4YmIwOWNiOWQ3M2UxYmIwODdjYWM2MzJkZjJhNWYwNzIzMjUzMzRjNTQwIn19fQ==");
 	
-	
 	// Tools and the like
 	
+
 	public static final SlimefunItemStack DRUG_PICKAXE = new SlimefunItemStack("SFDRUGS_DRUG_PICKAXE",Material.NETHERITE_PICKAXE,"&a&l&k|||&r &7&l采矿钻探机&r &a&l&k|||&r","&7效率15","&7时运15","&7耐久20","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	public static final SlimefunItemStack DRUG_SHOVEL = new SlimefunItemStack("SFDRUGS_DRUG_SHOVEL",Material.NETHERITE_SHOVEL,"&a&l&k|||&r &7&l地面粉碎机&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
 	public static final SlimefunItemStack DRUG_AXE = new SlimefunItemStack("SFDRUGS_DRUG_AXE",Material.NETHERITE_AXE,"&a&l&k|||&r &7&l电锯&r &a&l&k|||&r","",LoreBuilder.material("Irradiated Sirthium"), ""," &7- 蹲下启用光滑质感","",LoreBuilder.powerCharged(0, 12000), "",LoreBuilder.radioactive(Radioactivity.VERY_DEADLY),LoreBuilder.HAZMAT_SUIT_REQUIRED);
+
 
 	public static final SlimefunItemStack HOE = new SlimefunItemStack("SFDRUGS_HOE",Material.WOODEN_HOE,"&d小镇锄头", "","&d&l刷怪笼");
 	public static final SlimefunItemStack MYSTERIOUS_TRADER_SUMMONER  = new SlimefunItemStack("SFDRUGS_MYSTERIOUS_TRADER_SUMMONER",Material.CRYING_OBSIDIAN,"&c神秘商人的呼号","",LoreBuilder.RIGHT_CLICK_TO_USE);
@@ -136,7 +141,9 @@ public class Items {
 	}
 
 	
+
 	public static final SlimefunItemStack GANGSTER_CHESTPLATE = new SlimefunItemStack("SFDRUGS_GANGSTER_BOOTS",Material.LEATHER_CHESTPLATE,"&c红狼的背心","",LoreBuilder.material("用编织过的锡合金制作"));
+
 	static {
 		GANGSTER_CHESTPLATE.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 10);
 		LeatherArmorMeta ChestplateMeta = (LeatherArmorMeta) GANGSTER_CHESTPLATE.getItemMeta();
@@ -193,10 +200,12 @@ public class Items {
 	public static final SlimefunItemStack CORPORATE_TRADING_TERMINAL = new SlimefunItemStack("SFDRUGS_CORPORATION_TRADING_TERMINAL",CORPORATE_HEAD,"&7神秘交易人","",LoreBuilder.powerPerSecond(1280),"",LoreBuilder.radioactive(Radioactivity.MODERATE),LoreBuilder.HAZMAT_SUIT_REQUIRED,"",LoreBuilder.RIGHT_CLICK_TO_OPEN);
 	public static final SlimefunItemStack CORPORATE_ANDROID_CORE = new SlimefunItemStack("SFDRUGS_CORPORATION_ANDROID_CORE",CORPORATE_ANDROID_CORE_HEAD,"&5&lAndroid核心", "&5⇒ 用  re&5&ka&r&5l 制造 &5&k黑暗&r &5m&5&卡特&r!", "", "&e&l⚠ Warning! 非常不稳定! ⚠");
 	public static final MachineRecipeType CORPORATION_TRADE = new MachineRecipeType("CORPORATION_TRADER",Items.CORPORATE_GROUP);
+
 	public static final SlimefunItemStack ELECTRIC_SHEARS = new SlimefunItemStack("SFDRUGS_ELECTRIC_SHEARS",Material.SHEARS,"&7电动剪刀","",LoreBuilder.powerCharged(0, 1280),"",LoreBuilder.radioactive(Radioactivity.LOW));
 	
 	public static final SlimefunItemStack MYSTEROUS_TRADER = new SlimefunItemStack("MYSTERIOUS_TRADER_GROUJP",MYSTEROUS_TRADER_HEAD,"&c神秘交易人");
 	private static final SlimefunItemStack ROBOT_HEAD = new SlimefunItemStack("ROBOT_HEAD_GROUP",ROBOT_HELMET_HEAD,"&7boss掉落");;
+
 	static {
 		
 		CORPORATION_ROBOT_HELMET.addUnsafeEnchantment(Enchantment.DURABILITY, 100);
@@ -227,13 +236,14 @@ public class Items {
 		
 		CORPORATION_LASER_SWORD.setItemMeta(CORPORATION_LASER_SWORD_META);
 	
+		
 		ItemMeta ROBOT_HELMET_META = CORPORATION_ROBOT_HELMET.getItemMeta();
 		ROBOT_HELMET_META.addAttributeModifier(Attribute.GENERIC_ARMOR, new AttributeModifier(UUID.randomUUID(),"SFDRUGS_ROBOT_ARMOR",9,Operation.ADD_NUMBER,EquipmentSlot.HEAD));
 		ROBOT_HELMET_META.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, new AttributeModifier(UUID.randomUUID(),"SFDRUGS_ROBOT_ARMOR",6,Operation.ADD_NUMBER,EquipmentSlot.HEAD));
 		ROBOT_HELMET_META.addAttributeModifier(Attribute.GENERIC_ARMOR_TOUGHNESS, new AttributeModifier(UUID.randomUUID(),"SFDRUGS_ROBOT_ARMOR",6,Operation.ADD_NUMBER,EquipmentSlot.HEAD));
 		ROBOT_HELMET_META.addAttributeModifier(Attribute.GENERIC_KNOCKBACK_RESISTANCE, new AttributeModifier(UUID.randomUUID(),"SFDRUGS_ROBOT_ARMOR",1,Operation.ADD_NUMBER,EquipmentSlot.HEAD));
 		ROBOT_HELMET_META.addItemFlags(ItemFlag.HIDE_ATTRIBUTES,ItemFlag.HIDE_ENCHANTS);
-
+		
 		CORPORATION_ROBOT_HELMET.setItemMeta(ROBOT_HELMET_META);
 		
 		ItemMeta ROBOT_CHESTPLATE_META = CORPORATION_ROBOT_CHESTPLATE.getItemMeta();
@@ -334,8 +344,10 @@ public class Items {
 		RecipeType MYSTERIOUS_TRADER = new RecipeType(new NamespacedKey(this.plugin,"MYSTERIOUS_TRADER"),Items.MYSTEROUS_TRADER);
 		RecipeType SECURITY_ROBOT_DROP = new RecipeType(new NamespacedKey(this.plugin,"SECURITY_ROBOT_DROP"),Items.ROBOT_HEAD);
 		
+
 		new SlimefunItem(this.group,new SlimefunItemStack("SFDRUGS_UNCOMMON_LOOT_CHEST",Items.UNCOMMON_LOOT_CHEST_HEAD,"&a不常见的战利品箱子","",LoreBuilder.RIGHT_CLICK_TO_USE),SECURITY_ROBOT_DROP,new ItemStack[]{}).register(this.plugin);
 		new SlimefunItem(this.group,new SlimefunItemStack("SFDRUGS_RARE_LOOT_CHEST",Items.RARE_LOOT_CHEST_HEAD,"&b罕见的战利品箱子","",LoreBuilder.RIGHT_CLICK_TO_USE),SECURITY_ROBOT_DROP,new ItemStack[]{}).register(this.plugin);
+
 
 		
 		new PlatedHazmat(this.plugin,this.group,PlatedHazmat.getByInteger(0),RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[] {
@@ -402,6 +414,9 @@ public class Items {
 		new UnstableObject(this.invisibleItems,Items.CORPORATE_ANDROID_CORE,SECURITY_ROBOT_DROP,new ItemStack[] {
 				
 		},Unstable.UNSTABLE,this.plugin).register(this.plugin);
+		new UnstableObject(this.invisibleItems,new SlimefunItemStack("SFDRUGS_UNSTABLE_INGOT",new ItemStack(Material.IRON_INGOT),"&f&lUnstable Ingot","", "&e&l⚠ Warning! Extremely Unstable! ⚠"),SECURITY_ROBOT_DROP,new ItemStack[] {
+				
+		},Unstable.HIGHLY_UNSTABLE,this.plugin).register(this.plugin);
 		new SlimefunItem(this.group,Items.DRUG_PIPE,HOOKER_TRADE,new ItemStack[] {
 				new CustomItemStack(Items.METH,10)
 		}).register(this.plugin);
@@ -498,24 +513,24 @@ public class Items {
 		NDRUG_HELMET.register(this.plugin);		
 
 		DrugSuit NDRUG_CHESTPLATE = new DrugSuit(plugin, group, Items.DRUG_CHESTPLATE,CORPORATION_TRADE, new ItemStack[] {
-				new CustomItemStack(Items.MONEY,8),Items.DRUG_CHESTPLATE_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,3)
+				new CustomItemStack(Items.MONEY,9),Items.DRUG_CHESTPLATE_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,3)
 		}, new PotionEffect[] { new PotionEffect(PotionEffectType.FIRE_RESISTANCE,1200,0)});
 		NDRUG_CHESTPLATE.register(this.plugin);	
 		
 		DrugSuit NDRUG_LEGGINGS = new DrugSuit(plugin, group, Items.DRUG_LEGGINGS,CORPORATION_TRADE, new ItemStack[] {
-				new CustomItemStack(Items.MONEY,8),Items.DRUG_LEGGINGS_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,3)
+				new CustomItemStack(Items.MONEY,10),Items.DRUG_LEGGINGS_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,3)
 		}, new PotionEffect[] { new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE,1200,0), new PotionEffect(PotionEffectType.JUMP,1200,0)});
 		NDRUG_LEGGINGS.register(this.plugin);	
 		
 		DrugSuit NDRUG_BOOTS = new DrugSuit(plugin, group, Items.DRUG_BOOTS,CORPORATION_TRADE, new ItemStack[] {
-				new CustomItemStack(Items.MONEY,8),Items.DRUG_BOOTS_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,3)
+				new CustomItemStack(Items.MONEY,7),Items.DRUG_BOOTS_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,3)
 		}, new PotionEffect[] { new PotionEffect(PotionEffectType.SPEED,1200,1)});
 		NDRUG_BOOTS.register(this.plugin);	
 		
 		Snaids NSNAIDS = new Snaids(this.plugin,this.group,Items.SNAIDS,RECIPE_DRYER,new ItemStack[] { new ItemStack(Material.STICK,64),Items.TRAY});
 		NSNAIDS.register(this.plugin);
 		
-		SlimefunItem NMONEY = new SlimefunItem(this.group,Items.MONEY,RecipeType.MOB_DROP,new ItemStack[] {});
+		SlimefunItem NMONEY = new SlimefunItem(this.group,Items.MONEY,SECURITY_ROBOT_DROP,new ItemStack[] {});
 		NMONEY.register(this.plugin);
 		SFDrugsHoe NHOE = new SFDrugsHoe(this.group,Items.HOE,RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[] {
 			null,null,null,
@@ -526,16 +541,16 @@ public class Items {
 		NGAY_PANTS.register(this.plugin);
 		NHOE.register(this.plugin);
 		WorldEater NWORLDEATER = new WorldEater(this.group,Items.DRUG_PICKAXE,CORPORATION_TRADE,new ItemStack[] {
-				new CustomItemStack(Items.MONEY,18),Items.PICKAXE_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,2)
+				new CustomItemStack(Items.MONEY,33),Items.PICKAXE_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,2)
 			});
 
 		NWORLDEATER.register(this.plugin);
 		WorldEater NDRUG_AXE = new WorldEater(this.group,Items.DRUG_AXE,CORPORATION_TRADE,new ItemStack[] {
-				new CustomItemStack(Items.MONEY,18),Items.AXE_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,2)
+				new CustomItemStack(Items.MONEY,34),Items.AXE_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,2)
 			});
 		NDRUG_AXE.register(this.plugin);
 		WorldEater NDRUG_SHOVEL= new WorldEater(this.group,Items.DRUG_SHOVEL,CORPORATION_TRADE,new ItemStack[] {
-				new CustomItemStack(Items.MONEY,18),Items.SHOVEL_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,2)
+				new CustomItemStack(Items.MONEY,35),Items.SHOVEL_BLUEPRINT,new CustomItemStack(Items.IRRADIATED_SIRTHIUM_ALLOY,2)
 			});
 		NDRUG_SHOVEL.register(this.plugin);
 		Drug NCYANIDE = new Drug(this.group,Items.CYANIDE,RECIPE_DRYER,new ItemStack[] { new CustomItemStack(Items.DRIED_PLANT,64),Items.TRAY },new PotionEffect[] { new PotionEffect(PotionEffectType.HARM,240,100) });
